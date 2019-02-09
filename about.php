@@ -24,15 +24,13 @@ $people = [
 ];
 
 $show_message = false;
-$title = "Home";
-
-
+$title = "About";
 
 ?>
 <!doctype html>
 <html lang="en">
 <?php
-include 'head.php';
+include_once 'head.php';
 ?>
 <body class="bg-light">
 
@@ -41,7 +39,7 @@ include 'head.php';
         <div class="col-md-5">
             <ul class="list-group">
                 <?php foreach ($people as $person): ?>
-                    <li class="list-group-item"><?= $person["name"] ?> </li>
+                    <?php include_once 'list-item.php'?>
                 <?php endforeach; ?>
             </ul>
         </div>
